@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ALERT_TAB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+  </head>
+  
+<body style="background-color:#E8E8E8">
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="#" style="font-size:200%;"><span class="glyphicon glyphicon-user"></span>&nbsp;
+    <script LANGUAGE ="JavaScript">
+    function getParams()
+    {
+    var idx=document.URL.indexOf('?');
+    var params = new Array();
+    if(idx != -1)
+    {
+    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+    for(var i=0; i< pairs.length; i++)
+    {
+    nameVal = pairs[i].split('=');
+    params[nameVal[0]] = nameVal[1];
+    }
+    }
+    return params;
+    }
+    params=getParams();
+    inputEmail=unescape(params["inputEmail"]);
+    document.write(inputEmail + "<br>");
+    </script>
+	</a>
+	</li>
+   </ul>
+
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 
+			
+            <font color="white" size="5">&nbsp;&nbsp;Reporting</font>
+            <a href="">By User</a>
+            <a href="">By Location</a>
+			<hr>
+            <font color="white" size="5">&nbsp;&nbsp;Devices</font>
+            <a href="C:\Users\home\Documents\nodejs\electron\www\add_new_device_page.html" target="_blank">Add New Device</a>
+            <a href="" target="_blank">Remove Device</a>
+			<hr>
+			 <font color="white" size="5">&nbsp;&nbsp;Management</font>
+            <a href="C:\Users\home\Documents\nodejs\electron\www\add_new_user_page.html" target="_blank">Add New User</a>
+			<a href="C:\Users\home\Documents\nodejs\electron\www\modify_user_page.html" target="_blank">Modify User</a>
+            <a href="C:\Users\home\Documents\nodejs\electron\www\remove_user_page.html" target="_blank">Remove User</a>
+</div>
+
+<div id="main">
+ <font color="gray"> <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></font>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+</nav>
+  </div>
+
+  <div class="container">
+<center>
+<h3 style="color:red;" class="formhh-heading" style="float: left">Make sure your device is powered ON and connected to the Internet</h3>
+<form style="max-width: 330px; padding: 15px; margin: 0 auto;">
+        <button class="btn btn-lg btn-primary btn-block" formaction="dashbrd.html"type="submit" ="40%">Next</button>
+</form>
+</center>
+</div>
+
+  
+</body>
+</html>
